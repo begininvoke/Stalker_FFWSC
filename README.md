@@ -18,6 +18,7 @@ Sometimes you have virus or malware file and you want to scan your system with t
 >Release version v1.0.0.0 
 
 
->Video:
+>Video: 
+###click to view video
 
-[![click ti view video](https://img.youtube.com/vi/TYSHs0s6JrA/0.jpg)](https://www.youtube.com/watch?v=TYSHs0s6JrA)
+[![click to view video](https://img.youtube.com/vi/TYSHs0s6JrA/0.jpg)](https://www.youtube.com/watch?v=TYSHs0s6JrA)
