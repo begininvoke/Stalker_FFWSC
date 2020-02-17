@@ -20,4 +20,4 @@ Sometimes you have virus or malware file and you want to scan your system with t
 
 >Video:
 
-[![Alt text](https://img.youtube.com/vi/TYSHs0s6JrA/0.jpg)](https://www.youtube.com/watch?v=TYSHs0s6JrA)
+[![click ti view video](https://img.youtube.com/vi/TYSHs0s6JrA/0.jpg)](https://www.youtube.com/watch?v=TYSHs0s6JrA)
