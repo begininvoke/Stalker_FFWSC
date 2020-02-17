@@ -16,7 +16,7 @@ using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
 namespace FFWSC
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// github page https://github.com/zapezhman
     /// </summary>
     public partial class MainWindow : Window, System.Windows.Forms.IWin32Window
     {
@@ -430,7 +430,7 @@ namespace FFWSC
                 catch (Exception)
                 {
 
-                    throw;
+               
                 }
 
 

@@ -9,7 +9,7 @@ using System.Windows;
 namespace FFWSC
 {
     /// <summary>
-    /// Interaction logic for App.xaml
+    /// github page https://github.com/zapezhman
     /// </summary>
     public partial class App : Application
     {

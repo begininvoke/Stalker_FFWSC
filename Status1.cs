@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace FFWSC
 {
+    /// <summary>
+    /// github page https://github.com/zapezhman
+    /// </summary>
     public class Status
     {
         public string File { get; set; }
