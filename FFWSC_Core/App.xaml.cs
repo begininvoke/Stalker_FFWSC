@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace WpfApp1
+namespace FFWSC_Core
 {
     /// <summary>
     /// Interaction logic for App.xaml
