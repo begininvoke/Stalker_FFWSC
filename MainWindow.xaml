@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:anti_virus_builder"
+        xmlns:local="clr-namespace:FFWSC"
         xmlns:ControlzEx="clr-namespace:ControlzEx;assembly=MaterialDesignThemes.Wpf" x:Name="FFWSC" x:Class="FFWSC.MainWindow"
         mc:Ignorable="d"
         Title="Find Files With Similar Contents (FFWSC)" Height="450" Width="800" Activated="FFWSC_Activated" BorderBrush="#FF0B6D9B" Foreground="#FFC3C3C3" AllowDrop="True" Icon="14s.ico" WindowStyle="ThreeDBorderWindow" Background="#FF2C3E50" FontFamily="Calibri" Drop="FFWSC_Drop">
@@ -164,11 +164,10 @@
             <ColumnDefinition Width="569*"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="BTNchoice" Content="Choose" Margin="39,34,0,0" Click="Button_Click" HorizontalAlignment="Left" Width="86" Height="38" VerticalAlignment="Top" Grid.Column="2" Background="#FF2C3E50" BorderBrush="#3498DB"/>
-        <TextBox x:Name="TXTaddress" Margin="32,34,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="220" Grid.ColumnSpan="3" FontSize="10" BorderBrush="#ECF0F1"/>
+        <TextBox x:Name="TXTaddress" Margin="16,34,0,0" TextWrapping="Wrap" Height="23" VerticalAlignment="Top" HorizontalAlignment="Left" Width="220" Grid.ColumnSpan="3" FontSize="10" BorderBrush="#ECF0F1"/>
         <ProgressBar x:Name="PRque" Margin="10,0,10,10.5" Height="10" VerticalAlignment="Bottom" Grid.ColumnSpan="3" Background="#FF2C3E50" BorderBrush="#FF2C3E50" Foreground="#FF2980B9"/>
-        <Button x:Name="BTNselectdir" Content="Directory" HorizontalAlignment="Left" Margin="32,90,0,0" VerticalAlignment="Top" Width="122" Click="BTNselectdir_Click" Background="#FF2C3E50" Foreground="#DDFFFFFF" BorderBrush="#3498DB"/>
+        <Button x:Name="BTNselectdir" Content="Directory" HorizontalAlignment="Left" Margin="16,90,0,0" VerticalAlignment="Top" Width="122" Click="BTNselectdir_Click" Background="#FF2C3E50" Foreground="#DDFFFFFF" BorderBrush="#3498DB"/>
         <Button x:Name="BTNscan" Content="Scan" Margin="39,90,0,0" Height="32" HorizontalAlignment="Left" Width="86" VerticalAlignment="Top" Grid.Column="2" Click="Button_Click_1" Background="#2980B9" BorderBrush="#3498DB"/>
-        <CheckBox x:Name="CHmydir" Content="My Directory" HorizontalAlignment="Left" Margin="32,67,0,0" VerticalAlignment="Top" Checked="CHmydir_Checked" Foreground="#FFF1F1F1" BorderBrush="White" Background="White" Height="18" Width="90" Style="{DynamicResource CheckBoxStyle1}" />
         <Label x:Name="LBLqu" Content="0" Margin="75,0,30,33.5" Height="24" VerticalAlignment="Bottom" Foreground="#DDFFFFFF"/>
         <Label x:Name="inque" Content="In Queue" HorizontalAlignment="Left" Margin="13,0,0,32.5" Height="24" VerticalAlignment="Bottom" Foreground="#DDF2F2F2" Width="57"/>
         <ListView x:Name="ListView"  Margin="163,19,10,40.5" Foreground="#DDFFFFFF" HorizontalContentAlignment="Stretch" MouseDoubleClick="ListView_MouseClick" AutomationProperties.IsColumnHeader="True" BorderBrush="#3498DB" AutomationProperties.HelpText="&quot;Click To Open Directory&quot;" SelectionMode="Single" ForceCursor="True" Grid.Column="2" >
@@ -224,6 +223,9 @@
                 <DropShadowEffect Direction="300" RenderingBias="Quality" ShadowDepth="8"/>
             </Button.Effect>
         </Button>
+        <Button x:Name="BTNexport" Content="builder" HorizontalAlignment="Left" Margin="13,318,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2" IsEnabled="False"/>
+        <RadioButton x:Name="RBmydirectory" Content="My Directory" HorizontalAlignment="Left" Margin="16,67,0,0" VerticalAlignment="Top" Foreground="White" GroupName="DIR" Background="White" Checked="RBmydirectory_Checked"/>
+        <RadioButton x:Name="RBalldirectory" Content="All Directory" HorizontalAlignment="Left" Margin="114,67,0,0" VerticalAlignment="Top" Foreground="White" IsChecked="True" GroupName="DIR" BorderBrush="#FF7222FF" Background="White"/>
 
     </Grid>
 

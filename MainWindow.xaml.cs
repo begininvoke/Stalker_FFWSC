@@ -27,7 +27,7 @@ namespace FFWSC
             set { hash = Gethash(value); }
         }
         public long Lentgh { get; set; }
-        public string Custom_directory { get; set; }
+        public string Custom_directory { get; set; } = "";
 
         public int Max { get; set; }
   
@@ -61,7 +61,7 @@ namespace FFWSC
                 Lentgh = fileinfo.Length;
                 Hashfile_string = openFileDialog.FileName;
                 ListView.Items.Clear();
-
+                BTNexport.IsEnabled = true;
             }
         }
 
@@ -142,7 +142,7 @@ namespace FFWSC
         }
 
 
-
+        int PRvalue = 0;
         private void UpdatePrograssBar(int max)
         {
             if (!CheckAccess())
@@ -154,8 +154,14 @@ namespace FFWSC
                         this.Max = max;
 
                     }
-
-                    PRque.Maximum = this.Max; PRque.Value = max;
+                    int newvalue = this.Max - max;
+                    if (newvalue > PRvalue)
+                    {
+                        PRvalue = newvalue;
+                        PRque.Maximum = this.Max;
+                        PRque.Value = PRvalue;
+                    }
+              
                 }));
             }
             else
@@ -164,7 +170,14 @@ namespace FFWSC
                 {
                     this.Max = max;
                 }
-                PRque.Maximum = this.Max; PRque.Value = max;
+                int newvalue = this.Max - max;
+                if (newvalue > PRvalue)
+                {
+                    PRvalue = newvalue;
+                    PRque.Maximum = this.Max;
+                    PRque.Value = PRvalue;
+                }
+
             }
 
         }
@@ -229,8 +242,9 @@ namespace FFWSC
             {
                 while (Allfiles.Count > 0)
                 {
-                    UpdatePrograssBar((int)Allfiles.Count);
+                    
                     await Task.Run(() => Thread.Sleep(2000)).ConfigureAwait(true);
+                    UpdatePrograssBar((int)Allfiles.Count);
                     if (!CheckAccess())
                     {
                         Dispatcher.Invoke(new Action(() => { LBLqu.Content = Allfiles.Count; }));
@@ -240,7 +254,7 @@ namespace FFWSC
             }
             catch (Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                System.Windows.MessageBox.Show(ex.Message);
             }
 
             EnableControler();
@@ -269,16 +283,21 @@ namespace FFWSC
                 }
             }
         }
-        private void BTNselectdir_Click(object sender, RoutedEventArgs e)
+
+        private void Selectdir()
         {
             using (var fbd = new FolderBrowserDialog())
             {
                 var result = fbd.ShowDialog(this);
 
                 Custom_directory = fbd.SelectedPath;
-                CHmydir.IsChecked = true;
+                RBmydirectory.IsChecked = true;
 
             }
+        }
+        private void BTNselectdir_Click(object sender, RoutedEventArgs e)
+        {
+            Selectdir();
         }
 
         private async Task TaskOne(string dir)
@@ -324,7 +343,7 @@ namespace FFWSC
         {
             ListView.Items.Clear();
             DisableControler();
-            if ((bool)CHmydir.IsChecked)
+            if ((bool)RBmydirectory.IsChecked)
             {
                 _ = TaskOne(Custom_directory);
 
@@ -351,10 +370,7 @@ namespace FFWSC
 
 
 
-        private void CHmydir_Checked(object sender, RoutedEventArgs e)
-        {
 
-        }
         protected virtual bool IsFileLocked(FileInfo file)
         {
             FileStream stream = null;
@@ -475,6 +491,27 @@ namespace FFWSC
                 Hashfile_string = fileinfo.FullName;
                 ListView.Items.Clear();
             }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(TXTaddress.Text))
+            {
+                System.Windows.MessageBox.Show("Please Select File And Choose Directory Or Select All Directory ");
+                return;
+            }
+            if ((bool)RBalldirectory.IsChecked)
+            {
+                Custom_directory = "all";
+            }
+            Builder window1 = new Builder(hash, Lentgh.ToString(), Custom_directory);
+            window1.ShowDialog();
+           
+        }
+
+        private void RBmydirectory_Checked(object sender, RoutedEventArgs e)
+        {
+            Selectdir();
         }
     }
 }

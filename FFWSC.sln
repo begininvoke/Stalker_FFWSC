@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFWSC", "FFWSC.csproj", "{D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Release Mode", "Release Mode", "{2365968F-9AEA-478C-9679-E3F3EF8FC8BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFWSC_Core", "..\FFWSC_Core\FFWSC_Core.csproj", "{0029E148-2E1B-4EC5-A380-081F0657CB18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,9 +19,17 @@ Global
 		{D2E33C94-0A45-4308-958B-2C5499C165DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2E33C94-0A45-4308-958B-2C5499C165DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2E33C94-0A45-4308-958B-2C5499C165DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0029E148-2E1B-4EC5-A380-081F0657CB18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0029E148-2E1B-4EC5-A380-081F0657CB18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0029E148-2E1B-4EC5-A380-081F0657CB18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0029E148-2E1B-4EC5-A380-081F0657CB18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D2E33C94-0A45-4308-958B-2C5499C165DF} = {2365968F-9AEA-478C-9679-E3F3EF8FC8BF}
+		{0029E148-2E1B-4EC5-A380-081F0657CB18} = {2365968F-9AEA-478C-9679-E3F3EF8FC8BF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CACF31C-BF14-4292-9613-263AD81752AE}
