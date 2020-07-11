@@ -50,17 +50,18 @@ namespace FFWSC_Core
 
 
 
-        //public  string hash = "{hash}";
-        public string hash = "{hash}";
+        public  string hash = "{hash}";
+        //public string hash = "fafe9c2c410aed31084c98892ad05237f709de81";
+        //public string Lentgh { get; set; } = "1179024";
         public string Lentgh { get; set; } = "{Len}";
-        //public string Lentgh { get; set; } = "{Len}";
         public string Custom_directory { get; set; } = "{customdirectory}";
-        //public string Startup = "{startup}";
+        //public string Custom_directory { get; set; } = "C:\\Users";
         public string Startup = "{startup}";
-      
+        //public string Startup = "false";
         public string Autoscan = "{autoscan}";
-
+        //public string Autoscan = "false";
         public string Antivirus_name = "{name}";
+        //public string Antivirus_name = "putty.exe_Stalker_Cleaner";
         public int Max { get; set; }
 
         Queue<string> Allfiles = new Queue<string>();
@@ -92,9 +93,9 @@ namespace FFWSC_Core
                 { }
 
             }
-            await Task.Run(() => Thread.Sleep(3000)).ConfigureAwait(true);
+            await Task.Run(() => Thread.Sleep(10000)).ConfigureAwait(true);
             retry++;
-            if (retry < 2)
+            if (retry < 7)
                 goto Gotry;
 
 
