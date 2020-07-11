@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FFWSC_Core"
         mc:Ignorable="d"
-        Title="MyCore Clean Antivirus" Height="400" Width="400" Activated="Activeform_Activated" FontFamily="Calibri">
-    <Grid>
+        Title="MyCore Clean Antivirus" Height="375.709" Width="375.709" Activated="Activeform_Activated" FontFamily="Calibri">
+    <Grid Margin="-10,-32,2,11">
         <Button Content="Clean" Name="BTNclean" HorizontalAlignment="Left" Margin="27,324,0,0" VerticalAlignment="Top" Width="75" Click="BTNclean_Click" Background="White"/>
         <Button  x:Name="BTNscan" Content="Scan" HorizontalAlignment="Left" Margin="281,324,0,0" VerticalAlignment="Top" Width="84" Click="BTNscan_Click" Background="White"/>
         <ListView  x:Name="ListView" HorizontalAlignment="Left" Height="268" Margin="27,35,0,0" VerticalAlignment="Top" Width="338" Foreground="White">

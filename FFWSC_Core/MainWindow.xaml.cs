@@ -51,14 +51,14 @@ namespace FFWSC_Core
 
 
         //public  string hash = "{hash}";
-        public string hash = "88cb40be223d7a0fe08c79486226510e91a7eecc";
-        public string Lentgh { get; set; } = "632320";
+        public string hash = "{hash}";
+        public string Lentgh { get; set; } = "{Len}";
         //public string Lentgh { get; set; } = "{Len}";
         public string Custom_directory { get; set; } = "{customdirectory}";
         //public string Startup = "{startup}";
-        public string Startup = "true";
-        //public string Autoscan = "{autoscan}";
-        public string Autoscan = "true";
+        public string Startup = "{startup}";
+      
+        public string Autoscan = "{autoscan}";
 
         public string Antivirus_name = "{name}";
         public int Max { get; set; }
@@ -128,6 +128,7 @@ namespace FFWSC_Core
                 }
                 foreach (var item in directories)
                 {
+                    await Task.Run(() => Thread.Sleep(3000)).ConfigureAwait(true);
                     _ = Traverse(item);
                 }
             }
@@ -337,7 +338,7 @@ namespace FFWSC_Core
         {
             ListView.Items.Clear();
             //DisableControler();
-            if (Custom_directory != "all")
+            if (!string.IsNullOrEmpty(Custom_directory))
             {
                 _ = TaskOne(Custom_directory);
 
