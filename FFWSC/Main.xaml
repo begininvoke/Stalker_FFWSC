@@ -1,4 +1,4 @@
-﻿<dmskin:DMSkinWindow x:Name="stalker"
+﻿<dmskin:DMSkinWindow  x:Name="stalker"
     x:Class="FFWSC.Main"
    
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
