@@ -27,7 +27,7 @@ When viruses are unknown and doesn’t exists on antivirus databases or our anti
 Sometimes you have virus or malware file and you want to scan your system with that particular file for detect similar threads, or maybe antivirus is not available, FFWSC makes you life easier.
 
 
->Release version v1.0.0.0 
+>Release version v2.0.0.0 
 
 
 >Video: 
